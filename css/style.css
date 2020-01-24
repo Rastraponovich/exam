@@ -25,6 +25,7 @@ button:active{
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+	width: 100%;
 }
 .brand{
     display: flex;
