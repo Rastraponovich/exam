@@ -75,7 +75,6 @@ button:active{
 .slider{
     background-image: url("../img/bg.jpg");
     background-size: cover;
-    width: 100%;
     display: flex;
     flex-direction: row;
     text-align: center;
