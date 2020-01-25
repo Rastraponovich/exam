@@ -125,8 +125,6 @@ button:active{
     width: 24px;
     display: flex;
     align-items: center;
-    z-index: 1;
-
 }
 .search{
     position: absolute;
@@ -142,7 +140,6 @@ button:active{
 .search:focus{
     opacity: 1;
     left: 30px;
-    
 }
 .nav-link:hover{
     color: #c7b299;
@@ -164,6 +161,7 @@ button:active{
 .nav-arrows{
     color: #fff;
     opacity: 0.5;
+    padding: 60px 0 0 0;
 }
 .nav-arrow:hover{
     transform: scale(1.2);
