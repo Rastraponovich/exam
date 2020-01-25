@@ -125,12 +125,14 @@ button:active{
     width: 24px;
     display: flex;
     align-items: center;
+    z-index: 1;
+
 }
 .search{
     position: absolute;
     font-weight: 300;
     color: #fff;
-    left: 30px;
+    left: 130px;
     opacity: 0;
     border: 1px solid #fff;
     padding: 5px;
@@ -139,6 +141,8 @@ button:active{
 }
 .search:focus{
     opacity: 1;
+    left: 30px;
+    
 }
 .nav-link:hover{
     color: #c7b299;
