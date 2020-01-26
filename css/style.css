@@ -812,7 +812,7 @@ button:active{
     padding: 80px 375px 80px 375px;
     background-color: #191919;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: baseline;
 }
 .footer-element{
     margin: 0 0 0 0;
@@ -821,9 +821,6 @@ button:active{
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: baseline;
-}
-.footer-element1{
-    margin: 20px 0 0 0;
 }
 .footer .brand{
     margin: 0 0 30px 0;
