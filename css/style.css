@@ -512,13 +512,27 @@ button:active{
     color: #fff;
     margin: 0 10px 0 10px;
     padding: 0 0 0 0;
+    opacity: .67;
 }
 .card-btn:hover{
-    transform: scale(1.2);
+    opacity: 1;
 }
 .card-btn:active{
     border: none;
+    opacity: .67;
     background-color: transparent;
+}
+.card-btn-link{
+    background-image: url("../img/link.svg");
+    background-size: cover;
+    height: 28px;
+    width: 28px;
+}
+.card-btn-search{
+    background-image: url("../img/search.svg");
+    background-size: cover;
+    height: 27px;
+    width: 29px;
 }
 .card-body{
     text-align: left;
@@ -820,6 +834,11 @@ button:active{
     outline-offset: 0;
     height: 22px;
     width: 22px;
+    opacity: .67;
+}
+.recent-btn:hover{
+    opacity: 1;
+    transform: scale(1.2);
 }
 .post-left, .post-left:active{
     background-image: url("../img/post_left_arrow.svg");
