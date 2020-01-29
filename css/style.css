@@ -61,6 +61,7 @@ body{
 }
 a{
     text-decoration: none;
+    outline:none;
 }
 button,
 button:hover,
@@ -484,15 +485,15 @@ button:active{
 .card:nth-child(3n){
     margin: 0 0 30px 0;
 }
-.card:hover .card-overlay{
+.card:hover:after{
     top: 0;
-    opacity: .8;
 }
 .card:hover{
     background-color: #362f2d;
     position: relative;
 }
-.card-overlay{
+.card:after{
+    content: '';
     position: absolute;
     box-sizing: border-box;
     top: -100%;
@@ -503,16 +504,23 @@ button:active{
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
-    opacity: .1;
-    background-color: #222;
+    opacity: .7;
+    background-color: #111;
+    z-index: 1;
 }
 .card-btn{
     background-color: transparent;
     border: none;
     color: #fff;
-    margin: 0 10px 0 10px;
     padding: 0 0 0 0;
     opacity: .67;
+    top: -100px;
+    left: 144px;
+    position: absolute;
+    z-index: 2;
+}
+.card:hover .card-btn{
+    top: 106px;
 }
 .card-btn:hover{
     opacity: 1;
@@ -533,6 +541,7 @@ button:active{
     background-size: cover;
     height: 27px;
     width: 29px;
+    margin: 0 0 0 45px;
 }
 .card-body{
     text-align: left;
@@ -876,6 +885,9 @@ button:active{
 .partner-link:hover .partner-img {
     transform: scale(1.2);
 }
+.partner-link:active{
+    opacity: .67;
+}
 .footer{
     display: flex;
     padding: 80px 375px 80px 375px;
@@ -905,7 +917,7 @@ button:active{
     font-weight: 300;
     color: #555555;
 }
-.footer-link{
+.footer-link, .footer-link:active{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 20px;
@@ -970,7 +982,7 @@ button:active{
     margin: 0 0 15px 0;
     padding: 0 0 20px 0;
 }
-.twitter-post a{
+.twitter-post a, .twitter-post a:active{
     color: #00bff3;
     text-decoration: none;
 }
@@ -1001,7 +1013,7 @@ button:active{
     color: #555555;
 
 }
-.links-item{
+.links-item, .links-item:active{
     display: block;
     border-right: 1px solid #252525;
     padding: 0 10px 0 0;
@@ -1015,7 +1027,7 @@ button:active{
 .links-item:last-child{
     border-right: none;
 }
-.brand-link{
+.brand-link, .brand-link:active{
     color: #959595;
 }
 
