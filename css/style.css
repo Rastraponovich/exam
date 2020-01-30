@@ -326,9 +326,8 @@ button:active{
     width: 100%;
     fill:#555;
 }
-.special-img:hover{
+.special:hover .special-img{
     fill:#c7b299;
-
 }
 .special-title{
     font-size: 22px;
