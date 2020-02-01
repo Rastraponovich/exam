@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Title</title>
 </head>
 <body>
-    <header class="header padding-site">
+    <header class="header">
         <div class="brand">
-            <img src="img/logo.svg" alt="logo" class="brand-logo" height="59" width="66">
-            <h2 class="header-title">waxom</h2>
+            <a href="#">
+                <img src="img/logo.svg" alt="logo" class="brand-logo" height="59" width="66">
+            </a>
+            <span class="header-title">waxom</span>
         </div>
         <nav class="navigation">
             <a href="#" class="nav-link">home</a>
-            <a href="#" class="nav-link">about</a>
+            <a href="#" class="nav-link">about us</a>
             <a href="#" class="nav-link">portfolio</a>
             <a href="#" class="nav-link">features</a>
             <a href="#" class="nav-link">blog</a>
@@ -24,7 +24,11 @@
             <a href="#" class="nav-link">shortcodes</a>
             <a href="#" class="nav-link nav-link-last">contact</a>
             <button class="nav-button"><img src="img/cart-btn.svg" alt="cart" class="cart-img" height="27" width="20"></button>
-            <button class="nav-button"><img src="img/search-btn.svg" alt="search" class="search-img" height="28" width="27"></button>
+            <form action="#" class="form">
+                <label>
+                   <input class="search" id="search" type="search">
+                </label>
+            </form>
         </nav>
     </header>
     <section class="slider">
@@ -51,38 +55,30 @@
     </section>
     <main>
         <section class="specials">
-            <figure class="special">
+            <div class="special">
                 <img src="img/pencil.svg" alt="pencil" class="special-img" height="51" width="51">
-                <figcaption class="special-content">
-                    <h2 class="special-title">Web & App Design</h2>
-                    <p class="special-text">Nam liber tempor cum soluta nobis eleifend option congue
-                        nihil imperdiet doming id quod mazim.</p>
-                </figcaption>
-            </figure>
-            <figure class="special">
+                <h2 class="special-title">Web & App Design</h2>
+                <p class="special-text">Nam liber tempor cum soluta nobis eleifend option congue
+                    nihil imperdiet doming id quod mazim.</p>
+            </div>
+            <div class="special">
                 <img src="img/docs.svg" alt="docs" class="special-img" height="42" width="46">
-                <figcaption class="special-content">
-                    <h2 class="special-title">Development</h2>
-                    <p class="special-text">Lorem ipsum dolor sit amet, adipiscing elit,
-                       sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-                </figcaption>
-            </figure>
-            <figure class="special">
+                <h2 class="special-title">Development</h2>
+                <p class="special-text">Lorem ipsum dolor sit amet, adipiscing elit,
+                   sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+            </div>
+            <div class="special">
                 <img src="img/cog.svg" alt="cog" class="special-img" height="46" width="46">
-                <figcaption class="special-content">
-                    <h2 class="special-title">Customization</h2>
-                    <p class="special-text">Nam liber tempor cum soluta nobis eleifend option
-                        congue nihil imperdiet doming id quod mazim.</p>
-                </figcaption>
-            </figure>
-            <figure class="special">
+                <h2 class="special-title">Customization</h2>
+                <p class="special-text">Nam liber tempor cum soluta nobis eleifend option
+                    congue nihil imperdiet doming id quod mazim.</p>
+            </div>
+            <div class="special">
                 <img src="img/folder.svg" alt="folder" class="special-img" height="38" width="55">
-                <figcaption class="special-content">
-                    <h2 class="special-title">Marketing</h2>
-                    <p class="special-text">Nam liber tempor cum soluta nobis eleifend option congue
-                        nihil imperdiet doming id quod mazim.</p>
-                </figcaption>
-            </figure>
+                <h2 class="special-title">Marketing</h2>
+                <p class="special-text">Nam liber tempor cum soluta nobis eleifend option congue
+                    nihil imperdiet doming id quod mazim.</p>
+            </div>
         </section>
         <section class="ideas">
             <h2 class="block-title">Waxom is Realization of your Ideas.</h2>
@@ -128,7 +124,7 @@
                         </button>
                     </figcaption>
                 </figure>
-                <figure class="card card-active">
+                <figure class="card">
                     <img src="img/ph2.jpg" alt="photo1" class="card-img" height="237" width="370">
                     <figcaption class="card-body">
                         <h2 class="card-title">Quam Nutamus Farum</h2>
@@ -236,41 +232,31 @@
             </article>
         </section>
         <section class="counters">
-            <figure class="counter">
+            <div class="counter">
                 <img src="img/humans.svg" alt="counter-icon" class="counter-img" height="47" width="46">
-                <figcaption class="counter-content">
-                    <h2 class="counter-title">3587</h2>
-                    <span class="counter-text"> Satisfied Clients</span>
-                </figcaption>
-            </figure>
-            <figure class="counter">
+                <h2 class="counter-title">3587</h2>
+                <span class="counter-text"> Satisfied Clients</span>
+            </div>
+            <div class="counter">
                 <img src="img/coffee.svg" alt="counter-icon" class="counter-img" height="47" width="51">
-                <figcaption class="counter-content">
-                    <h2 class="counter-title">207</h2>
-                    <span class="counter-text">Cups of coffee</span>
-                </figcaption>
-            </figure>
-            <figure class="counter">
+                <h2 class="counter-title">207</h2>
+                <span class="counter-text">Cups of coffee</span>
+            </div>
+            <div class="counter">
                 <img src="img/message.svg" alt="counter-icon" class="counter-img" height="46" width="46">
-                <figcaption class="counter-content">
-                    <h2 class="counter-title">2500</h2>
-                    <span class="counter-text">Blog posts</span>
-                </figcaption>
-            </figure>
-            <figure class="counter">
+                <h2 class="counter-title">2500</h2>
+                <span class="counter-text">Blog posts</span>
+            </div>
+            <div class="counter">
                 <img src="img/heart.svg" alt="counter-icon" class="counter-img" height="47" width="47">
-                <figcaption class="counter-content">
-                    <h2 class="counter-title">873</h2>
-                    <span class="counter-text">Likes</span>
-                </figcaption>
-            </figure>
-            <figure class="counter">
+                <h2 class="counter-title">873</h2>
+                <span class="counter-text">Likes</span>
+            </div>
+            <div class="counter">
                 <img src="img/dish.svg" alt="counter-icon" class="counter-img" height="46" width="56">
-                <figcaption class="counter-content">
-                    <h2 class="counter-title">900</h2>
-                    <span class="counter-text">We launched</span>
-                </figcaption>
-            </figure>
+                <h2 class="counter-title">900</h2>
+                <span class="counter-text">We launched</span>
+            </div>
         </section>
         <section class="recent">
             <h2 class="block-title">Recent Posts.</h2>
@@ -353,7 +339,7 @@
                 </p>
                 <a class="footer-link" href="#">Read More</a>
             </div>
-            <article class="footer-element footer-element1">
+            <article class="footer-element">
                 <h2 class="footer-title">Recent Posts</h2>
                 <a href="#" class="footer-post-link">
                     <span class="footer-post-subtitle">September 08, 2015</span>
@@ -368,7 +354,7 @@
                     <span class="footer-post-text">Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</span>
                 </a>
             </article>
-            <div class="footer-element footer-element1">
+            <div class="footer-element">
                 <h2 class="footer-title">Our Twitter</h2>
                 <article class="twitter-post">
                     <span class="footer-post-text"><a href="#">@waxom</a> Cum soluta nobis eleifend option congue nihil imperdiet doming</span>
@@ -383,7 +369,7 @@
                     <span class="footer-post-subtitle">20 days ago</span>
                 </article>
             </div>
-            <figure class="footer-element footer-element1">
+            <figure class="footer-element">
                 <h2 class="footer-title">Dribbble Widget</h2>
                 <img src="img/footer_gallery_img_1.jpg" alt="footer-gallery-img" class="footer-gallery-img" height="98" width="130">
                 <img src="img/footer_gallery_img_2.jpg" alt="footer-gallery-img" class="footer-gallery-img" height="98" width="130">
@@ -393,7 +379,7 @@
         </div>
         <div class="links-block">
             <div class="links">
-                <span class="links-item">Copyright © 2015 <a href="#" class="brand-link">Waxom</a></span>
+                <span class="links-item">Copyright &copy; 2015 <a href="#" class="brand-link">Waxom</a></span>
                 <a href="#" class="links-item">Privacy Policy</a>
                 <a href="#" class="links-item">FAQ</a>
                 <a href="#" class="links-item">Support</a>
