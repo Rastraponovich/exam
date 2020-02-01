@@ -56,7 +56,10 @@ body{
 body{
     position: relative;
 }
-*, ::before, ::after, :active{
+*,
+::before,
+::after,
+:active{
     transition: .3s;
 }
 a{
@@ -126,6 +129,7 @@ button:active{
     color: #fff;
 }
 .nav-button{
+    fill: #fff;
     height: 27px;
     width: 20px;
     border: none;
@@ -142,7 +146,7 @@ button:active{
 .form{
     display: flex;
 }
-.form label{
+.search-label{
     position: relative;
     background-image: url("../img/search-btn.svg");
     background-size: cover;
@@ -154,8 +158,9 @@ button:active{
 .search{
     position: absolute;
     font-weight: 300;
+    width: 320px;
     color: #fff;
-    left: -180px;
+    left: -285px;
     top: -200px;
     opacity: 0;
     border: 1px solid #fff;
@@ -165,10 +170,9 @@ button:active{
 }
 .search:focus{
     opacity: 1;
-    left: -180px;
+    left: -285px;
     top: 35px;
 }
-
 .slider{
     background-image: url("../img/bg.jpg");
     background-size: cover;
@@ -177,7 +181,6 @@ button:active{
     padding: 380px 150px 40px 150px;
     justify-content: space-between;
 }
-
 .nav-arrow{
     padding: 0 0 0 0;
     margin: 60px 0 0 0;
@@ -260,31 +263,27 @@ button:active{
     position: absolute;
 	left:909px;
 }
-.slider-nav:after {
-    content: "";
+.slider-nav-link,
+.slider-nav-link:active{
     display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-.slider-round{
     margin: 0 10px 0 0;
     width: 11px;
     height: 11px;
     opacity: 0.5;
     background-color: #ffffff;
     border-radius: 50%;
+    border: 2px solid transparent;
+    box-sizing: border-box;
 }
-.slider-round:hover{
-    transform: scale(1.5);
-    opacity: 1;
-}
-.slider-nav-active{
-    width: 15px;
-    height: 15px;
+.slider-nav-link:hover{
+    transform: scale(1.4);
     border: 2px solid #d3c1ad;
-    border-radius: 50%;
     background-color: transparent;
+    opacity: 1;
+    box-sizing: border-box;
+}
+.slider-nav-link:last-child{
+    margin: 0 0 0 0;
 }
 .specials{
     font-family: 'Raleway', sans-serif;
@@ -346,7 +345,7 @@ button:active{
 }
 .ideas{
     display: flex;
-    padding: 80px 375px 0 375px;
+    padding: 80px 345px 0 345px;
     background-color: #fbfaf8;
     text-align: center;
     flex-wrap: wrap;
@@ -380,12 +379,8 @@ button:active{
     justify-content: center;
     width: 100%;
 }
-.ideas-gallery:after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+.ideas-gallery img:hover{
+    z-index: 4;
 }
 .idea-img-left{
     position: absolute;
@@ -507,53 +502,54 @@ button:active{
     background-color: #111;
     z-index: 1;
 }
+.card-img{
+    display: block;
+}
 .card-btn{
     background-color: transparent;
     border: none;
-    color: #fff;
     padding: 0 0 0 0;
-    opacity: .67;
     top: -100px;
-    left: 144px;
     position: absolute;
     z-index: 2;
 }
 .card:hover .card-btn{
-    top: 106px;
+    top: 32%;
 }
-.card-btn:hover{
-    opacity: 1;
+.card-btn-link:hover{
+    background-image: url("../img/link-h.svg");
 }
-.card-btn:active{
-    border: none;
-    opacity: .67;
-    background-color: transparent;
-}
-.card-btn-link{
+.card-btn-link,
+.card-btn-link:active{
     background-image: url("../img/link.svg");
     background-size: cover;
+    left: 40%;
     height: 28px;
     width: 28px;
 }
-.card-btn-search{
+.card-btn-search:hover{
+    background-image: url("../img/search-h.svg");
+}
+.card-btn-search,
+.card-btn-search:active{
     background-image: url("../img/search.svg");
     background-size: cover;
+    right: 40%;
     height: 27px;
     width: 29px;
-    margin: 0 0 0 45px;
 }
 .card-body{
     text-align: left;
     padding: 30px 0 30px 30px;
     position: relative;
+    display: block;
+    box-sizing: border-box;
 }
 .card-body:before{
     content: '';
     position: absolute;
-    width: 0;
-    height: 0;
     background-color: transparent;
-    top: -13px;
+    top: -8px;
     left: 20px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
@@ -711,6 +707,7 @@ button:active{
     text-align: center;
 }
 .counter-img{
+    fill: #c7b299;
     margin: 0 0 30px 0;
 }
 .counter-title{
@@ -749,6 +746,12 @@ button:active{
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+}
+.post-wrapper .slider-nav-link{
+    opacity: .3;
+}
+.post-wrapper .slider-nav-link:hover{
+    opacity: 1;
 }
 .post{
     margin: 0 0 40px 0;
@@ -816,14 +819,14 @@ button:active{
     font-weight: 300;
     color: #8c8c8c;
 }
-.post-link{
+.post-link,
+.post-link:active{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
     color: #c7b299;
     text-decoration: none;
-
 }
 .post-link:after{
     margin: 0 0 0 10px;
@@ -833,29 +836,35 @@ button:active{
     height: 8px;
     background-image: url("../img/link_arrow.svg");
     background-size: cover;
+    opacity: 0;
 }
-.recent-btn, .recent-btn:active{
+.post-link:hover::after{
+    opacity: 1;
+}
+.recent-btn,
+.recent-btn:active{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     border: none;
     background-color: transparent;
+    background-size: cover;
     outline-offset: 0;
     height: 22px;
     width: 22px;
-    opacity: .67;
-}
-.recent-btn:hover{
-    opacity: 1;
-    transform: scale(1.2);
-}
-.post-left, .post-left:active{
+}.post-left:hover{
+     background-image: url("../img/post_left_arrow-h.svg");
+ }
+.post-left,
+.post-left:active{
     background-image: url("../img/post_left_arrow.svg");
-    background-size: cover;
     margin: 0 10px 0 0;
 }
-.post-right{
+.post-right:hover{
+    background-image: url("../img/post_right_arrow-h.svg");
+}
+.post-right,
+.post-right:active{
     background-image: url("../img/post_right_arrow.svg");
-    background-size: cover;
 }
 .post:hover{
     background-color: #362f2d;
@@ -916,7 +925,8 @@ button:active{
     font-weight: 300;
     color: #555555;
 }
-.footer-link, .footer-link:active{
+.footer-link,
+.footer-link:active{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 20px;
@@ -981,7 +991,8 @@ button:active{
     margin: 0 0 15px 0;
     padding: 0 0 20px 0;
 }
-.twitter-post a, .twitter-post a:active{
+.twitter-post a,
+.twitter-post a:active{
     color: #00bff3;
     text-decoration: none;
 }
@@ -1010,9 +1021,11 @@ button:active{
     line-height: 20px;
     font-weight: 300;
     color: #555555;
-
 }
-.links-item, .links-item:active{
+.links-item-text,
+.links-item-link,
+.links-item-link:active,
+.links-item-text:active{
     display: block;
     border-right: 1px solid #252525;
     padding: 0 10px 0 0;
@@ -1023,10 +1036,12 @@ button:active{
 .links a:hover {
     color: #c7b299;
 }
-.links-item:last-child{
+.links-item-link:last-child,
+.links-item-link:last-child{
     border-right: none;
 }
-.brand-link, .brand-link:active{
+.brand-link,
+.brand-link:active{
     color: #959595;
 }
 
