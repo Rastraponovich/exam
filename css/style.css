@@ -1061,9 +1061,15 @@ button:active{
     .brand{
         margin: 0 0 0 0;
         font-size: 30px;
+        z-index: 3;
+        position: relative;
+        left: 0;
+        transition: .5s;
     }
     #menu__toggle {
         opacity: 0;
+        position: absolute;
+        right: 0;
     }
     #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
@@ -1083,11 +1089,19 @@ button:active{
         visibility: visible;
         right: 0;
         height: 100vh;
+        border-radius: 0;
+        padding: 4em 30% 4em 30%;
+        opacity: .9;
+    }
+    #menu__toggle:checked~ .brand{
+        z-index: 3;
+        position: relative;
+        left: 4em;
+        transition: .5s;
     }
     .menu__btn {
         display: flex;
-        align-items: center;
-        position: sticky;
+        position: absolute;
         top: 50px;
         right: 30px;
         width: 26px;
@@ -1103,7 +1117,7 @@ button:active{
         width: 100%;
         height: 2px;
         background-color: #fff;
-        transition-duration: .25s;
+        transition-duration: .3s;
     }
     .menu__btn > span::before {
         content: '';
@@ -1120,22 +1134,24 @@ button:active{
         visibility: hidden;
         top: 0;
         right: -200%;
-        margin: 0;
-        padding: 80px 30%;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
         background-color: #333;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-        opacity: .9;
+        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+        opacity: .4;
         transition-duration: .5s;
         justify-content: center;
         box-sizing: border-box;
         z-index: 1;
         height: 5vh;
+        font-size: 1.5em;
+        border-radius: 50%;
     }
     .nav-link{
         display: block;
         width: 100%;
         text-align: center;
-        margin: 0 0 20px 0;
+        margin: 0 0 0 0;
     }
     .nav-link:hover{
         text-decoration: underline;
