@@ -869,6 +869,21 @@ button:active{
 }
 .recent-btn:last-child{
     margin: 0 0 0 0;
+
+}.post-left:hover{
+     background-image: url("../img/post_left_arrow-h.svg");
+ }
+.post-left,
+.post-left:active{
+    background-image: url("../img/post_left_arrow.svg");
+    margin: 0 10px 0 0;
+}
+.post-right:hover{
+    background-image: url("../img/post_right_arrow-h.svg");
+}
+.post-right,
+.post-right:active{
+    background-image: url("../img/post_right_arrow.svg");
 }
 .post:hover{
     background-color: #362f2d;
@@ -931,6 +946,8 @@ button:active{
 }
 .footer-link,
 .footer-link:active{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     color: #d1d1d1;
@@ -1043,7 +1060,6 @@ button:active{
 .brand-link:active{
     color: #959595;
 }
-
 @media screen and (width: 480px){
     html,
     body{
@@ -1314,3 +1330,4 @@ button:active{
         display: none;
     }
 }
+
