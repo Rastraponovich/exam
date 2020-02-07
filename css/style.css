@@ -1036,7 +1036,7 @@ button:active{
     color: #c7b299;
 }
 .links-item-link:last-child,
-.links-item-link:last-child{
+.links-item-text:last-child{
     border-right: none;
 }
 .brand-link,
