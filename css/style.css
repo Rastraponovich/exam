@@ -1084,6 +1084,7 @@ button:active{
     }
     #menu__toggle:checked ~ .menu__btn{
         position: fixed;
+        z-index: 10;
     }
     #menu__toggle:checked ~ .navigation {
         visibility: visible;
@@ -1093,13 +1094,14 @@ button:active{
         padding: 4em 30% 4em 30%;
         opacity: .9;
         align-items: flex-end;
+        z-index: 9;
     }
     #menu__toggle:checked~ .brand{
-        z-index: 3;
         position: relative;
         left: 4em;
         transition: .5s;
         transform: scale(.7);
+        z-index: 10;
     }
     .menu__btn {
         display: flex;
@@ -1276,6 +1278,9 @@ button:active{
         padding: 5em 2em 3em 2em;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .footer .brand{
+        z-index: 1;
     }
     .footer-element{
         max-width: 100%;
