@@ -1043,7 +1043,6 @@ button:active{
 .brand-link:active{
     color: #959595;
 }
-
 @media screen and (width: 480px){
     html,
     body{
@@ -1240,9 +1239,6 @@ button:active{
         line-height: 20px;
         box-sizing: border-box;
     }
-    .mobile-item{
-
-    }
     .mobile-item::before{
         position: absolute;
         left: -2.5em;
@@ -1314,3 +1310,5 @@ button:active{
         display: none;
     }
 }
+
+ 
