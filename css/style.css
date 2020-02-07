@@ -1099,6 +1099,7 @@ button:active{
         position: relative;
         left: 4em;
         transition: .5s;
+        transform: scale(.7);
     }
     .menu__btn {
         display: flex;
