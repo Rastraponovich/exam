@@ -1064,7 +1064,9 @@ button:active{
         z-index: 3;
         position: relative;
         left: 0;
-        transition: .5s;
+        transition: scale .5s,
+                    left .5s,
+                    z-index .5s;
     }
     #menu__toggle {
         opacity: 0;
@@ -1143,7 +1145,7 @@ button:active{
         background-color: #333;
         box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
         opacity: .4;
-        transition-duration: .5s;
+        transition: .5s;
         justify-content: center;
         box-sizing: border-box;
         z-index: 1;
