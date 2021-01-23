@@ -889,6 +889,7 @@ button:active {
 .post:hover .day {
     background-color: #a48d72;
 }
+
 .partners {
     display: flex;
     justify-content: space-between;
